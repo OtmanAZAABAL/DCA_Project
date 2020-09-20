@@ -1,0 +1,593 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B265B459-B4B6-44BC-BDB1-B401C58DC48F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PlayerUI</RootNamespace>
+    <AssemblyName>PlayerUI</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>08-03-20201659411238633846.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="Microsoft.AnalysisServices, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Management.Instrumentation" />
+    <Reference Include="System.Messaging" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Add Formes\Add_Details_Facture.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Add Formes\Add_Details_Facture.Designer.cs">
+      <DependentUpon>Add_Details_Facture.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Add Formes\Add_Assurence_Voiture.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Add Formes\Add_Assurence_Voiture.Designer.cs">
+      <DependentUpon>Add_Assurence_Voiture.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Add Formes\Add_Categorie_Voiture.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Add Formes\Add_Categorie_Voiture.Designer.cs">
+      <DependentUpon>Add_Categorie_Voiture.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Add Formes\Add_Details_Emplacment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Add Formes\Add_Details_Emplacment.Designer.cs">
+      <DependentUpon>Add_Details_Emplacment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Facture_Pro.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Facture_Pro.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Maintenence\Add_ALERTE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Maintenence\Add_ALERTE.Designer.cs">
+      <DependentUpon>Add_ALERTE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Details_Reservation\Add_Details_Reservation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Details_Reservation\Add_Details_Reservation.Designer.cs">
+      <DependentUpon>Add_Details_Reservation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Maintenence\Add_Maintenence.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Maintenence\Add_Maintenence.Designer.cs">
+      <DependentUpon>Add_Maintenence.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Maintenence\Add_Type_Maintenence.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Maintenence\Add_Type_Maintenence.Designer.cs">
+      <DependentUpon>Add_Type_Maintenence.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Add_User.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Add_User.Designer.cs">
+      <DependentUpon>Add_User.cs</DependentUpon>
+    </Compile>
+    <Compile Include="history\Clients_history.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="history\Clients_history.Designer.cs">
+      <DependentUpon>Clients_history.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Details_Reservation\Details_Reservation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Details_Reservation\Details_Reservation.Designer.cs">
+      <DependentUpon>Details_Reservation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="history\Details_Reservation_History.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="history\Details_Reservation_History.Designer.cs">
+      <DependentUpon>Details_Reservation_History.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Maintenence\ALERTE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Maintenence\ALERTE.Designer.cs">
+      <DependentUpon>ALERTE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Circular_PictureBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="KEY\Formkey.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KEY\Formkey.Designer.cs">
+      <DependentUpon>Formkey.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms_Gestion\Details_Facture.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms_Gestion\Details_Facture.Designer.cs">
+      <DependentUpon>Details_Facture.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Add Formes\Add_Detail_Remise.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Add Formes\Add_Detail_Remise.Designer.cs">
+      <DependentUpon>Add_Detail_Remise.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Add Formes\Add_Employer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Add Formes\Add_Employer.Designer.cs">
+      <DependentUpon>Add_Employer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Add Formes\Add_Voiture.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Add Formes\Add_Voiture.Designer.cs">
+      <DependentUpon>Add_Voiture.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms_Gestion\Assurence_Voiture.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms_Gestion\Assurence_Voiture.Designer.cs">
+      <DependentUpon>Assurence_Voiture.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms_Gestion\Categorie_Voiture.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms_Gestion\Categorie_Voiture.Designer.cs">
+      <DependentUpon>Categorie_Voiture.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Add Formes\Add_Client.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Add Formes\.Designer.cs">
+      <DependentUpon>Add_Client.cs</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms_Gestion\Details_Emplacment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms_Gestion\Details_Emplacment.Designer.cs">
+      <DependentUpon>Details_Emplacment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms_Gestion\Detail_Remise.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms_Gestion\Detail_Remise.Designer.cs">
+      <DependentUpon>Detail_Remise.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms_Gestion\Employer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms_Gestion\Employer.Designer.cs">
+      <DependentUpon>Employer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms_Gestion\Gestion_User.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms_Gestion\Gestion_User.Designer.cs">
+      <DependentUpon>Gestion_User.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmImpression2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmImpression2.Designer.cs">
+      <DependentUpon>FrmImpression2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="history\history.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="history\history.Designer.cs">
+      <DependentUpon>history.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login\Find_Your_Account.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login\Find_Your_Account.Designer.cs">
+      <DependentUpon>Find_Your_Account.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Maintenence\Maintenence.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Maintenence\Maintenence.Designer.cs">
+      <DependentUpon>Maintenence.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MSG\Msg_Erreur2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MSG\Msg_Erreur2.Designer.cs">
+      <DependentUpon>Msg_Erreur2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="parametres\fond_d_ecran.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="parametres\fond_d_ecran.Designer.cs">
+      <DependentUpon>fond_d_ecran.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GPS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GPS.Designer.cs">
+      <DependentUpon>GPS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="About\About.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="About\About.Designer.cs">
+      <DependentUpon>About.cs</DependentUpon>
+    </Compile>
+    <Compile Include="parametres\Info_societe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="parametres\Info_societe.Designer.cs">
+      <DependentUpon>Info_societe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="parametres\logo_de_societe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="parametres\logo_de_societe.Designer.cs">
+      <DependentUpon>logo_de_societe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MSG\Msg_Ajouter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MSG\Msg_Ajouter.Designer.cs">
+      <DependentUpon>Msg_Ajouter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Db.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms_Gestion\Clients.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms_Gestion\Clients.designer.cs">
+      <DependentUpon>Clients.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MSG\Msg_Erreur.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MSG\Msg_Erreur.Designer.cs">
+      <DependentUpon>Msg_Erreur.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MSG\Msg_Suppression.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MSG\Msg_Suppression.Designer.cs">
+      <DependentUpon>Msg_Suppression.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pass.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="MSG\Confirmer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MSG\Confirmer.Designer.cs">
+      <DependentUpon>Confirmer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MSG\Msg_Verifier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MSG\Msg_Verifier.Designer.cs">
+      <DependentUpon>Msg_Verifier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="parametres\Settings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="parametres\Settings.Designer.cs">
+      <DependentUpon>Settings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms_Gestion\Voiture.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms_Gestion\Voiture.Designer.cs">
+      <DependentUpon>Voiture.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login\Recupérez_votre_compte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login\Recupérez_votre_compte.Designer.cs">
+      <DependentUpon>Recupérez_votre_compte.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login\ResetPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login\ResetPassword.Designer.cs">
+      <DependentUpon>ResetPassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Maintenence\Type_Maintenence.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Maintenence\Type_Maintenence.Designer.cs">
+      <DependentUpon>Type_Maintenence.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rapports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Rapports.Designer.cs">
+      <DependentUpon>Rapports.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Add Formes\Add_Details_Facture.resx">
+      <DependentUpon>Add_Details_Facture.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Add Formes\Add_Assurence_Voiture.resx">
+      <DependentUpon>Add_Assurence_Voiture.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Add Formes\Add_Categorie_Voiture.resx">
+      <DependentUpon>Add_Categorie_Voiture.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Add Formes\Add_Details_Emplacment.resx">
+      <DependentUpon>Add_Details_Emplacment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Facture_Pro.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Facture_Pro.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Maintenence\Add_ALERTE.resx">
+      <DependentUpon>Add_ALERTE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Details_Reservation\Add_Details_Reservation.resx">
+      <DependentUpon>Add_Details_Reservation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Maintenence\Add_Maintenence.resx">
+      <DependentUpon>Add_Maintenence.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Maintenence\Add_Type_Maintenence.resx">
+      <DependentUpon>Add_Type_Maintenence.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Add_User.resx">
+      <DependentUpon>Add_User.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="history\Clients_history.resx">
+      <DependentUpon>Clients_history.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Details_Reservation\Details_Reservation.resx">
+      <DependentUpon>Details_Reservation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="history\Details_Reservation_History.resx">
+      <DependentUpon>Details_Reservation_History.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Maintenence\ALERTE.resx">
+      <DependentUpon>ALERTE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KEY\Formkey.resx">
+      <DependentUpon>Formkey.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms_Gestion\Categorie_Voiture.resx">
+      <DependentUpon>Categorie_Voiture.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms_Gestion\Details_Emplacment.resx">
+      <DependentUpon>Details_Emplacment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms_Gestion\Details_Facture.resx">
+      <DependentUpon>Details_Facture.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Add Formes\Add_Detail_Remise.resx">
+      <DependentUpon>Add_Detail_Remise.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Add Formes\Add_Employer.resx">
+      <DependentUpon>Add_Employer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Add Formes\Add_Voiture.resx">
+      <DependentUpon>Add_Voiture.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms_Gestion\Assurence_Voiture.resx">
+      <DependentUpon>Assurence_Voiture.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Add Formes\Add_Client.resx">
+      <DependentUpon>Add_Client.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms_Gestion\Detail_Remise.resx">
+      <DependentUpon>Detail_Remise.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms_Gestion\Employer.resx">
+      <DependentUpon>Employer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms_Gestion\Gestion_User.resx">
+      <DependentUpon>Gestion_User.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmImpression2.resx">
+      <DependentUpon>FrmImpression2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="history\history.resx">
+      <DependentUpon>history.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login\Find_Your_Account.resx">
+      <DependentUpon>Find_Your_Account.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Maintenence\Maintenence.resx">
+      <DependentUpon>Maintenence.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MSG\Msg_Erreur2.resx">
+      <DependentUpon>Msg_Erreur2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="parametres\fond_d_ecran.resx">
+      <DependentUpon>fond_d_ecran.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GPS.resx">
+      <DependentUpon>GPS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="About\About.resx">
+      <DependentUpon>About.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="parametres\Info_societe.resx">
+      <DependentUpon>Info_societe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="parametres\logo_de_societe.resx">
+      <DependentUpon>logo_de_societe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MSG\Msg_Ajouter.resx">
+      <DependentUpon>Msg_Ajouter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms_Gestion\Clients.resx">
+      <DependentUpon>Clients.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MSG\Msg_Erreur.resx">
+      <DependentUpon>Msg_Erreur.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MSG\Msg_Suppression.resx">
+      <DependentUpon>Msg_Suppression.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="MSG\Confirmer.resx">
+      <DependentUpon>Confirmer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MSG\Msg_Verifier.resx">
+      <DependentUpon>Msg_Verifier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="parametres\Settings.resx">
+      <DependentUpon>Settings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms_Gestion\Voiture.resx">
+      <DependentUpon>Voiture.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login\Recupérez_votre_compte.resx">
+      <DependentUpon>Recupérez_votre_compte.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login\ResetPassword.resx">
+      <DependentUpon>ResetPassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Maintenence\Type_Maintenence.resx">
+      <DependentUpon>Type_Maintenence.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rapports.resx">
+      <DependentUpon>Rapports.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vide.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="08-03-20201659411238633846.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
