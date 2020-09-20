@@ -15,7 +15,7 @@ namespace PlayerUI
 
 
         static SqlConnection cn = new SqlConnection();
-        static DataSet ds = new DataSet();
+        static DataSet ds = new DataSet();    
 
 
         static public void ouvrirConnection()
